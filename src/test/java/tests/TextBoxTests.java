@@ -48,7 +48,8 @@ public class TextBoxTests {
         $("#stateCity-wrapper").$(Selectors.byText("Delhi")).click();
         $("#submit").click();
 
-        $("#example-modal-sizes-title-lg").shouldHave(text("Alex Larin"),
+        $(".modal-content").shouldHave(text("Thanks for submitting the form"),
+                text("alexLar@gmail.com"),
                 text("alexLar@gmail.com"), text("Male"), text("3748596032"), text("Lenina 5"),
                 text("10 April,1990"), text("Physics"), text("Reading"),
                 text("Screenshot_1.png"), text("Lenina 5"), text("NCR Delhi"));
