@@ -2,26 +2,20 @@ plugins {
     id 'java-library'
 }
 
-group 'ru.webprizma'
-version '0.0.1'
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation (
-            'org.junit.jupiter:junit-jupiter:5.8.2',
-            'com.codeborne:selenide:6.5.1',
-            'org.slf4j:slf4j-simple:1.7.36',
-            "com.github.javafaker:javafaker:1.0.2"
+    testImplementation(
+            'com.codeborne:selenide:6.3.2',
+            'org.junit.jupiter:junit-jupiter:5.8.2'
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 }
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-
 test {
     useJUnitPlatform()
 }
