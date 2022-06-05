@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class TextBoxTests {
+public class RegistrationFromTestsWithPageObjectsTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -41,7 +41,7 @@ public class TextBoxTests {
         $("#uploadPicture").uploadFile (new File("src/test/java/resources/Screenshot_2.png"));
         $("#currentAddress-wrapper").click();
         $("#currentAddress").val("Lenina 5");
-        $("#state").scrollTo().click();
+        $("#state").click();
         $("#stateCity-wrapper").$(byText("NCR")).click();
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Delhi")).click();
