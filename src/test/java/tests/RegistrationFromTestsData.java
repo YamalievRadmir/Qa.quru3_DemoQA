@@ -16,12 +16,12 @@ public class RegistrationFromTestsData extends TestBase{
     void successfulTest() {
         String firstName = getRandomString(10);
         String lastName = getRandomMessage(10, 100);
-        String email = getRandomEmail();
+        //String email = getRandomEmail();
 
         registrationFromPage.setOpenPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
-                .setUserEmail(email)
+                .setUserEmail("alexLar@gmail.com")
                 .setGenterWrapper("Male")
                 .setUserNumber("3748596032")
                 .setDateOfBirth("10", "April", "1990")
@@ -32,7 +32,7 @@ public class RegistrationFromTestsData extends TestBase{
                 .setStateCity("NCR")
                 .setStateCity2("Delhi")
                 .checkResult("Student Name", firstName + " " + lastName)
-                .checkResult("Student Email", email)
+                .checkResult("Student Email", "alexLar@gmail.com")
                 .checkResult("Date of Birth", "10 April,1990");
     }
 }
