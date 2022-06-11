@@ -34,8 +34,8 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setGenter(String value) {
-        $("#genterWrapper").$(byText("Male")).click();
+    public RegistrationFromPage setGenter(String Genter) {
+        $("#genterWrapper").$(byText(Genter)).click();
         return this;
     }
 
@@ -51,21 +51,21 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setSubjects(String value) {
-        $("#subjectsInput").setValue("Physics").pressEnter();
+    public RegistrationFromPage setSubjects(String Subjects) {
+        $("#subjectsInput").setValue(Subjects).pressEnter();
 
         return this;
 
     }
 
-    public RegistrationFromPage setHobbies(String value) {
-        $("#hobbiesWrapper").$(byText("Reading")).click();
+    public RegistrationFromPage setHobbies(String hobbyInput) {
+        $("#hobbiesWrapper").$(byText(hobbyInput)).click();
 
         return this;
     }
 
-    public RegistrationFromPage setLoadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File("src/test/resources/Screenshot_2.png"));
+    public RegistrationFromPage setLoadPicture(String upload) {
+        $("#uploadPicture").uploadFile(new File(upload));
         $("#currentAddress-wrapper").click();
 
         return this;
@@ -77,14 +77,14 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setStateCity(String value) {
-        $("#stateCity-wrapper").$(byText("NCR")).click();
+    public RegistrationFromPage setStateCity(String StateCity) {
+        $("#stateCity-wrapper").$(byText(StateCity)).click();
         $("#city").click();
         return this;
     }
 
-    public RegistrationFromPage setStateCity2(String value) {
-        $("#stateCity-wrapper").$(byText("Delhi")).click();
+    public RegistrationFromPage setStateCity2(String StateCity2) {
+        $("#stateCity-wrapper").$(byText(StateCity2)).click();
         $("#submit").click();
         return this;
     }
