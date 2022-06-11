@@ -16,7 +16,6 @@ public class RegistrationFromTestsDataWithFaker extends TestBase{
     String lastName = faker.address().lastName();
     String email = faker.internet().emailAddress();
     String currentAddress = faker.address().fullAddress();
-    //String firstName = faker.address().firstName();
     //String lastName = getRandomMessage(10, 100);
     //String email = getRandomEmail();
 
