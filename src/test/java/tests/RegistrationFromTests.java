@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static tests.TestData.FIRST_NAME;
+import static tests.TestData.LAST_NAME;
+
 
 public class RegistrationFromTests extends TestBase{
 
@@ -12,12 +15,9 @@ public class RegistrationFromTests extends TestBase{
 
     @Test
     void successfulTest() {
-        String firstName = "Alex";
-        String lastName = "Larin";
-
         registrationFromPage.OpenPage()
-                .setFirstName(firstName)
-                .setLastName(lastName)
+                .setFirstName(FIRST_NAME)
+                .setLastName(LAST_NAME)
                 .setUserEmail("alexLar@gmail.com")
                 .setGenter("Male")
                 .setUserNumber("3748596032")
@@ -28,7 +28,7 @@ public class RegistrationFromTests extends TestBase{
                 .setCurrentAddress("Lenina 5")
                 .setStateCity("NCR")
                 .setStateCity2("Delhi")
-                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
                 .checkResult("Student Email", "alexLar@gmail.com")
                 .checkResult("Date of Birth", "10 April,1990");
     }
