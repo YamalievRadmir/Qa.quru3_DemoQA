@@ -1,7 +1,7 @@
-package Pages;
+package pages;
 
-import Pages.components.CalenderComponent;
-import Pages.components.ResultsTableComponent;
+import pages.components.CalenderComponent;
+import pages.components.ResultsTableComponent;
 
 import java.io.File;
 

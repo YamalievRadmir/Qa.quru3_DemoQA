@@ -1,6 +1,6 @@
 package tests;
 
-import Pages.RegistrationFromPage;
+import pages.RegistrationFromPage;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;

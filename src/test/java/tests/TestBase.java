@@ -1,12 +1,9 @@
 package tests;
 
-import Pages.RegistrationFromPage;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
-
-    RegistrationFromPage registrationFromPage = new RegistrationFromPage();
 
     @BeforeAll
     static void beforeAll() {
