@@ -14,7 +14,7 @@ public class RegistrationFromPage {
     CalenderComponent calenderComponent = new CalenderComponent();
     ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
 
-    public RegistrationFromPage setOpenPage() {
+    public RegistrationFromPage OpenPage() {
         open("/automation-practice-form");
         return this;
     }
@@ -30,17 +30,17 @@ public class RegistrationFromPage {
     }
 
     public RegistrationFromPage setUserEmail(String value) {
-        $("[id=userEmail]").setValue("alexLar@gmail.com");
+        $("[id=userEmail]").setValue(value);
         return this;
     }
 
-    public RegistrationFromPage setGenterWrapper(String value) {
+    public RegistrationFromPage setGenter(String value) {
         $("#genterWrapper").$(byText("Male")).click();
         return this;
     }
 
     public RegistrationFromPage setUserNumber(String value) {
-        $("[id=userNumber]").setValue("3748596032");
+        $("[id=userNumber]").setValue(value);
         return this;
     }
 
@@ -65,14 +65,14 @@ public class RegistrationFromPage {
     }
 
     public RegistrationFromPage setLoadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File("src/test/java/resources/Screenshot_2.png"));
+        $("#uploadPicture").uploadFile(new File("src/test/resources/Screenshot_2.png"));
         $("#currentAddress-wrapper").click();
 
         return this;
     }
 
     public RegistrationFromPage setCurrentAddress(String value) {
-        $("#currentAddress").val("Lenina 5");
+        $("#currentAddress").setValue(value);
         $("#state").click();
         return this;
     }

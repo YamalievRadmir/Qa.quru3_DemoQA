@@ -38,7 +38,7 @@ public class RegistrationFromTestsOriginal {
         $(".react-datepicker__day--010:nth-child(3)").click();
         $("#subjectsInput").setValue("Physics").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
-        $("#uploadPicture").uploadFile (new File("src/test/java/resources/Screenshot_2.png"));
+        $("#uploadPicture").uploadFile (new File("src/test/resources/Screenshot_2.png"));
         $("#currentAddress-wrapper").click();
         $("#currentAddress").val("Lenina 5");
         $("#state").click();
