@@ -24,10 +24,10 @@ public class RegistrationFromTests extends TestBase{
                 .setDateOfBirth("10", "April", "1990")
                 .setSubjects("Physics")
                 .setHobbies("Reading")
-                .setLoadPicture(String.valueOf(new File("src/test/resources/Screenshot_2.png")))
+                .uploadImage(String.valueOf(new File("src/test/resources/Screenshot_2.png")))
                 .setCurrentAddress("Lenina 5")
-                .setStateCity("NCR")
-                .setStateCity2("Delhi")
+                .setStateState("NCR")
+                .setStateCity("Delhi")
                 .checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
                 .checkResult("Student Email", "alexLar@gmail.com")
                 .checkResult("Date of Birth", "10 April,1990");

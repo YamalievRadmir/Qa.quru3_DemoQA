@@ -64,7 +64,7 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setLoadPicture(String upload) {
+    public RegistrationFromPage uploadImage(String upload) {
         $("#uploadPicture").uploadFile(new File(upload));
         $("#currentAddress-wrapper").click();
 
@@ -77,14 +77,14 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setStateCity(String StateCity) {
-        $("#stateCity-wrapper").$(byText(StateCity)).click();
+    public RegistrationFromPage setStateState(String StateState) {
+        $("#stateCity-wrapper").$(byText(StateState)).click();
         $("#city").click();
         return this;
     }
 
-    public RegistrationFromPage setStateCity2(String StateCity2) {
-        $("#stateCity-wrapper").$(byText(StateCity2)).click();
+    public RegistrationFromPage setStateCity(String StateCity) {
+        $("#stateCity-wrapper").$(byText(StateCity)).click();
         $("#submit").click();
         return this;
     }

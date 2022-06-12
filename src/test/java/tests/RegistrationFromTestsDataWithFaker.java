@@ -6,6 +6,8 @@ import pages.RegistrationFromPage;
 
 import java.io.File;
 
+import static utils.RandomUtils.getRandomPhone;
+
 
 public class RegistrationFromTestsDataWithFaker extends TestBase{
 
@@ -16,7 +18,8 @@ public class RegistrationFromTestsDataWithFaker extends TestBase{
     String lastName = faker.address().lastName();
     String email = faker.internet().emailAddress();
     String currentAddress = faker.address().fullAddress();
-    //String lastName = getRandomMessage(10, 100);
+    String genter = "Male";
+    String userNumber = getRandomPhone();
     //String email = getRandomEmail();
 
     @Test
@@ -27,17 +30,24 @@ public class RegistrationFromTestsDataWithFaker extends TestBase{
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(email)
-                .setGenter("Male")
-                .setUserNumber("3748596032")
+                .setGenter(genter)
+                .setUserNumber(userNumber)
                 .setDateOfBirth("10", "April", "1990")
                 .setSubjects("Physics")
                 .setHobbies("Reading")
-                .setLoadPicture(String.valueOf(new File("src/test/resources/Screenshot_2.png")))
+                .uploadImage(String.valueOf(new File("src/test/resources/Screenshot_2.png")))
                 .setCurrentAddress(currentAddress)
-                .setStateCity("NCR")
-                .setStateCity2("Delhi")
+                .setStateState("NCR")
+                .setStateCity("Delhi")
                 .checkResult("Student Name", firstName + " " + lastName)
                 .checkResult("Student Email", email)
-                .checkResult("Date of Birth", "10 April,1990");
+                .checkResult("Gender", "Male")
+                .checkResult("Mobile", userNumber)
+                .checkResult("Date of Birth", "10 April,1990")
+                .checkResult("Subjects", "Physics")
+                .checkResult("Hobbies", "Reading")
+                .checkResult("Picture", "Screenshot_2.png")
+                .checkResult("Address", currentAddress)
+                .checkResult("State and City", "NCR Delhi");
     }
 }
