@@ -15,7 +15,7 @@ public class RegistrationFromTests extends TestBase{
 
     @Test
     void successfulTest() {
-        registrationFromPage.OpenPage()
+        registrationFromPage.openPage()
                 .setFirstName(FIRST_NAME)
                 .setLastName(LAST_NAME)
                 .setUserEmail("alexLar@gmail.com")

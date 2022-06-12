@@ -23,7 +23,7 @@ public class RegistrationFromTestsDataWithFaker extends TestBase{
     void successfulTest() {
 
 
-        registrationFromPage.OpenPage()
+        registrationFromPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(email)

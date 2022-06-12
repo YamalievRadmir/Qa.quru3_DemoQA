@@ -18,7 +18,7 @@ public class RegistrationFromTestsData extends TestBase{
         String lastName = getRandomMessage(10, 100);
         //String email = getRandomEmail();
 
-        registrationFromPage.OpenPage()
+        registrationFromPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail("alexLar@gmail.com")

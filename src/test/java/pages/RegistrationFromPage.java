@@ -14,7 +14,7 @@ public class RegistrationFromPage {
     CalenderComponent calenderComponent = new CalenderComponent();
     ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
 
-    public RegistrationFromPage OpenPage() {
+    public RegistrationFromPage openPage() {
         open("/automation-practice-form");
         return this;
     }
