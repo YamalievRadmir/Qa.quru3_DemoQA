@@ -34,8 +34,8 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setGenter(String Genter) {
-        $("#genterWrapper").$(byText(Genter)).click();
+    public RegistrationFromPage setGender(String gender) {
+        $("#genterWrapper").$(byText(gender)).click();
         return this;
     }
 
@@ -51,8 +51,8 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setSubjects(String Subjects) {
-        $("#subjectsInput").setValue(Subjects).pressEnter();
+    public RegistrationFromPage setSubjects(String subjects) {
+        $("#subjectsInput").setValue(subjects).pressEnter();
 
         return this;
 
@@ -77,14 +77,14 @@ public class RegistrationFromPage {
         return this;
     }
 
-    public RegistrationFromPage setStateState(String StateState) {
-        $("#stateCity-wrapper").$(byText(StateState)).click();
+    public RegistrationFromPage setState(String stateState) {
+        $("#stateCity-wrapper").$(byText(stateState)).click();
         $("#city").click();
         return this;
     }
 
-    public RegistrationFromPage setStateCity(String StateCity) {
-        $("#stateCity-wrapper").$(byText(StateCity)).click();
+    public RegistrationFromPage setCity(String stateCity) {
+        $("#stateCity-wrapper").$(byText(stateCity)).click();
         $("#submit").click();
         return this;
     }
